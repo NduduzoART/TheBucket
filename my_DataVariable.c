@@ -1,19 +1,9 @@
-/*-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-*\
-*                                                                                               *
-*       File Name               :       my_DataVariable.c                                       *
-*                                                                                               *
-*       Creation Date           :       09 Dec 2025                                             *
-*                                                                                               *   *                                                                                               *
-*       created By              :       Lahlimbazo                                              *
-*                                                                                               *   \*-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-*/
-
-#include "my_library.h"
+#include "library.h"
 
 /* In computer programming, a variable is a re usable container for a value, 
  * it behaves as if it were the value it contains.
  *
  * In programming data type specify the type of data that can be stored in a variable
- *
  *
  * Data Type: -> int: whole numbers || 4 bytes %d is used for printing
  * 		 float: single precision decimal number || 4 bytes %f is used
