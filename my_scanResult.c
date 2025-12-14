@@ -1,11 +1,24 @@
+/* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+
+* File Name : my_scanResult.c
+
+* Purpose :
+
+* Creation Date : 14-12-2025
+
+* Last Modified : Sun Dec 14 21:36:21 2025
+
+* Created By : Lahlimbazo 
+
+_._._._._._._._._._._._._._._._._._._._._.*/
+
 #include "library.h"
 
 int main()
 {
-	int grade;
+        int grade;
 
-	printf("Enter learner grade: ");
-
+        printf("Enter learner grade: ");
 	scanf("%d", &grade);
 
 	if (80 <= grade && grade <= 100)
@@ -36,14 +49,14 @@ int main()
 	{
 		printf("Level 1 Fail | No Achievement\n");
 	}
-	else if (grade > 100)
-	{
-		printf("Incorrect Input\n");
-	}
-	else if (grade < 0)
-	{
-		printf("Incorrect Input\n");
-	}
+        else if (grade > 100)
+        {
+                printf("Incorrect Input\n");
+        }
+        else if (grade < 0)
+        {
+                printf("Incorrect Input\n");
+        }
 
-	return (0);
+        return (0);
 }
