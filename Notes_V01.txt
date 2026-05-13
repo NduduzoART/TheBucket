@@ -1,0 +1,73 @@
+C Language Introduction
+
+C is a general-purpose procedural programming language known for its efficiency and low-level memory access. It is widely used in system programming, embedded systems and performance-critical applications due to its speed, portability and close interaction with hardware.
+
+MAIN FEATURES OF C LANGUAGE
+- General Purpose and Portable
+- Procedural Programming Language
+- Low-level Memory Access
+- Fast Speed
+- Clean Syntax
+
+HEADER FILES INCLUSION
+A header file is a file with extension .h which contains C function declarations and macro definitions to be shared between several source files.
+All lines that start with # are processed by a preprocessor which is a program invoked by the compiler.
+
+Some of the C Header files:
+unistd.h - It defines constants, types, and functions for system calls like file I/O (read, write, close),
+	   process management (fork, exec), and directory operations.
+stdio.h  - Defines core input and output functions
+string.h - Defines string handling functions
+math.h   - Defines common mathematical functions.
+
+WHAT IS A FUNCION IN C?
+A function holds a piece of code that does a specific task.
+A function can take inputs (called parameters), execute a block of statements, and optionally return a result.
+A function allows you to write a piece of logic once and reuse it whenever needed in the program.
+This keeps the code clean, organized, easier to understand and manage.
+
+write()
+- The function in C is a low-level system call primarily used on Unix-like operating systems (Linux, macOS) to write specific number of bytes
+  from a buffer to a file or steam.
+- The function is defined in the <unistd.h> header.
+- Syntax: ssize_t write(int fd, const void *buf, size_t count);
+  fd (file descriptor): A small integer that represents an open file or stream.
+  Common defaults include: 1. Standard Output (STDOUT)
+			   2. Standard error (STDERR)
+  buf (Buffer): A pointer to the memory location containing the data you want to write.
+  count: The exact number of bytes to write from the buffer.
+- On success, it returns the number of bytes actually written. If an error occurs, it returns -1.
+
+putchar()
+- In C, it is a standard library function used to write a single character (of unsigned char type) to the standard output (stdout),
+  which is typically the console screen. It is defined in the <stdio.h> header file
+- Syntax: int putchar(int char);
+  char: The character to be written, passed as an int.
+  Return Value: Returns the character written on success, or EOF (End Of File) if an error occurs.
+Key Details	- Character Input: putchar() takes the ASCII value of a character or a character literal.
+		- Single Character Only: It only prints one character at a time, making it faster than printf for single character output.
+		- Usage: Commonly used in loops to display characters one by one or to display patterns.
+
+WHAT ARE VARIABLES
+In programming, a variable is a name given to a memory location inside the computer where data can be stored.
+It is a re-usable container for a value and behaves as if it were the value it contains.
+
+WHAT ARE DATA TYPES
+In programming data types specify the type of data that can be stored in a variable.
+
+Data types	- int (4 bytes) whole numbers | Format Specifier: %d
+		- float (4 byte) single precision, decimal number | Format Specifier: %f
+		- double (8 bytes) double precision, decimal number | Format Specifier: %lf
+		- char -> single character (1 byte), char[] -> array of characters (size varies) | Format Specifier: %c
+		- bool -> true or false (1 byte) | requires <stdbool.h>
+
+WHAT ARE OPERATORS?
+A special symbol that is used to perform operations in values and variables.
+
+Arithmetic	: (+) Addition
+		: (-) Subtraction
+		: (*) Multiplication
+		: (/) Division
+		: (%) Remainder
+		: (++) Increment (increased by 1)
+		: (--) Decrement (decreased by 1)

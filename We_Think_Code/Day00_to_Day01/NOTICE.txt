@@ -1,13 +1,13 @@
 I decided to skip the exercises for the two days.
 I am not using iTerm2 and apple pc
-These exercises are to train you in utilizing Linus commands.
+These exercises are to train you in utilizing Linux commands.
 I am currently using Windows PowerShell
 
 Not so good luck for you if you are looking for solutions to submit at your bootcamp.
 
 But all the best in the weekly Fridays tests ..... Practice makes perfect
 
-These are some of the Linus commands you will love to use
+These are some of the Linux commands you will love to use
 - ls: Lists all files and directories in your current location.
 - cd: Changes your current directory (e.g., cd /home/user/Documents).
 - pwd: Prints the full path of your current working directory.
@@ -17,5 +17,5 @@ These are some of the Linus commands you will love to use
 - mv: Moves or renames files and directories.
 - rm: deletes files
 
-The Linus cheat sheet link: https://www.geeksforgeeks.org/linux-unix/linux-commands-cheat-sheet/
+The Linux cheat sheet link: https://www.geeksforgeeks.org/linux-unix/linux-commands-cheat-sheet/
 
