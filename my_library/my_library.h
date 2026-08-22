@@ -31,6 +31,8 @@ int     my_isalpha(int c);
 int     my_isdigit(int c);
 int     my_isalnum(int c);
 int     my_isprint(int c);
+int     my_isascii(int c);
+int     my_isspace(int c);
 
 
 /* Output */
@@ -45,6 +47,6 @@ char    *my_strcpy(char *dest, char *src);
 
 /* Number <- -> String */
 int     my_atoi(char *str);
-char    *my_itoa(int n);
+//char    *my_itoa(int n);
 
 #endif
