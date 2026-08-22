@@ -21,8 +21,17 @@ typedef struct s_list
 {
     void            *content;
     size_t          content_size;
-    struct s_list   *next
+    struct s_list   *next;
 }   t_list;
+
+/* Charecter */
+int     my_tolower(int c);
+int     my_toupper(int c);
+int     my_isalpha(int c);
+int     my_isdigit(int c);
+int     my_isalnum(int c);
+int     my_isprint(int c);
+
 
 /* Output */
 void    my_putchar(char c);
