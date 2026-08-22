@@ -1,7 +1,7 @@
 /* 
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 |	  *	     *		|
-|	 *	      *		| File		:	my_putchar.c
+|	 *	      *		| File		:	my_strlen.c
 |	*	       *	|
 |	****************	| Author	:	Lahlimbazo
 |	 *    *       *		|
@@ -14,7 +14,17 @@
 
 #include "my_library.h"
 
-void    my_putchar(char c)
+/*
+print the length of a string
+*/
+int     my_strlen(char *str)
 {
-    write(1, &c, 1);
+    int i;
+
+    i = 0;
+    while (str[i] != '\0')
+    {
+        i++;
+    }
+    return (i);
 }

@@ -16,16 +16,26 @@
 #define MY_LIBRARY_H
 
 #include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
 
+typedef struct s_list
+{
+    void            *content;
+    size_t          content_size;
+    struct s_list   *next
+}   t_list;
+
+/* Output */
 void    my_putchar(char c);
+void    my_putnbr(int n);
 void    my_putstr(char *str);
+
+/* String */
 int     my_strlen(char *str);
 int     my_strcmp(char *s1, char *s2);
 char    *my_strcpy(char *dest, char *src);
+
+/* Number <- -> String */
 int     my_atoi(char *str);
 char    *my_itoa(int n);
-int     my_printf(const char *format, ...);
 
 #endif

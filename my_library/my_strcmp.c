@@ -1,11 +1,11 @@
 /* 
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
 |	  *	     *		|
-|	 *	      *		| File		:	my_putchar.c
+|	 *	      *		| File		:	my_strcmp.c
 |	*	       *	|
 |	****************	| Author	:	Lahlimbazo
 |	 *    *       *		|
-|	  *   *	     *		| Creation Date	:	2026-08-21	
+|	  *   *	     *		| Creation Date	:	2026-08-22	
 |	   *  ****  *		|
 |	    *	   *		| Copywrite	:	Property of TheBucket
 |	     ******		|
@@ -14,7 +14,17 @@
 
 #include "my_library.h"
 
-void    my_putchar(char c)
+/*
+For comparing two9 strings, character by character
+*/
+
+int     my_strcmp(char *s1, char *s2)
 {
-    write(1, &c, 1);
+    int i = 0;
+
+    while (s1[i] == s2[i] && s1[i] != '\0')
+    {
+        i++;
+    }
+    return (s1[i] - s2[i]);
 }
