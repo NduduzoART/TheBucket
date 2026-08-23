@@ -33,17 +33,30 @@ int     my_isalnum(int c);
 int     my_isprint(int c);
 int     my_isascii(int c);
 int     my_isspace(int c);
-
+int     my_islower(int c);
+int     my_isupper(int c);
+void    my_isnegative(int c);
+void    my_swap(int *a, int *b);
 
 /* Output */
 void    my_putchar(char c);
+void    my_putchar_fd(char c, int fd);
 void    my_putnbr(int n);
+void    my_putnbr_fd(int n, int fd);
 void    my_putstr(char *str);
+void    my_putstr_fd(char *str, int fd);
+void    my_putendl(char const *s);
+void    my_putendl_fd(char const *s, int fd);
+void    my_putnbrendl(int n);
+void    my_putnbrendl(int n, int fd);
 
 /* String */
 int     my_strlen(char *str);
 int     my_strcmp(char *s1, char *s2);
+int     my_strncmp(const char *s1, const char *s2, size_t n);
 char    *my_strcpy(char *dest, char *src);
+char    *my_strncpy(char *dest, char *src, size_t len);
+char    my_search_and_replace(char *str, char a, char b);
 
 /* Number <- -> String */
 int     my_atoi(char *str);
