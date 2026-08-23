@@ -18,7 +18,7 @@
 
 int    my_toupper(int c)
 {
-    if (c >= 'a' && c <= 'z')
+    if (my_isalpha(c) && my_islower(c))
     {
         return (c - 32);
     }

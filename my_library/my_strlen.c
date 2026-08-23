@@ -17,9 +17,9 @@
 /*
 print the length of a string
 */
-int     my_strlen(char *str)
+size_t     my_strlen(char *str)
 {
-    int i;
+    size_t i;
 
     i = 0;
     while (str[i] != '\0')
