@@ -35,8 +35,6 @@ int     my_isascii(int c);
 int     my_isspace(int c);
 int     my_islower(int c);
 int     my_isupper(int c);
-void    my_isnegative(int c);
-void    my_swap(int *a, int *b);
 
 /* Output */
 void    my_putchar(char c);
@@ -48,7 +46,7 @@ void    my_putstr_fd(char *str, int fd);
 void    my_putendl(char const *s);
 void    my_putendl_fd(char const *s, int fd);
 void    my_putnbrendl(int n);
-void    my_putnbrendl(int n, int fd);
+void    my_putnbrendl_fd(int n, int fd);
 
 /* String */
 int     my_strlen(char *str);
@@ -58,8 +56,10 @@ char    *my_strcpy(char *dest, char *src);
 char    *my_strncpy(char *dest, char *src, size_t len);
 char    my_search_and_replace(char *str, char a, char b);
 
-/* Number <- -> String */
+/* Utility */
 int     my_atoi(char *str);
 //char    *my_itoa(int n);
+void    my_isnegative(int n);
+void    my_swap(int *a, int *b);
 
 #endif
