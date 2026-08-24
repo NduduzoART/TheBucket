@@ -1,12 +1,12 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_isspace.c
+"	     *	  *		|   File : my_putendl_fd.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
 "	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-24 21:12:18
+"         *   *      *          |   Last Modified : 2026-08-24 21:02:49
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
@@ -14,13 +14,12 @@
 
 #include "my_library.h"
 
-/*   */
+/*
+prints a string followed by a newline to the specified file descriptor
+*/
 
-int     my_isspace(int c)
+void    my_putendl(const char *s, int fd)
 {
-    if (c >= 9 && c <= 13 || c == 32)
-    {
-        return (1);
-    }
-    return (0);
+    my_putstr_fd(s, fd);
+    my_putchar_fd('\n', fd);
 }
