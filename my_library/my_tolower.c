@@ -6,13 +6,13 @@
 "	*              *        |
 "	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-24 21:14:15
+"         *   *      *          |   Last Modified : 2026-08-25 20:49:00
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "my_library.h"
+#include "tb_lib.h"
 
 /* takes a charector and convert it to lowercase */
 

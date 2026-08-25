@@ -1,12 +1,12 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_putstr_fd.c
+"	     *	  *		|   File : my_puts.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-24
+"	****************	|   Creation Date : 2026-08-25
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:41:06
+"         *   *      *          |   Last Modified : 2026-08-25 21:25:35
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
@@ -15,14 +15,11 @@
 #include "tb_lib.h"
 
 /*
-it write an entire string to the specified file destriptor
+prints a string followed by a newline
 */
 
-void    my_putstr_fd(const char *str, int fd)
+void    my_puts(const char *s)
 {
-    while (*str)
-    {
-        my_putchar_fd(*str, fd);
-        str++;
-    }
+    my_putstr(s);
+    my_putchar('\n');
 }

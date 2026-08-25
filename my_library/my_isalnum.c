@@ -6,13 +6,13 @@
 "	*              *        |
 "	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-24 21:08:43
+"         *   *      *          |   Last Modified : 2026-08-25 20:46:27
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "my_library.h"
+#include "tb_lib.h"
 
 /* check whether a charecter is alphabetic or numeric */
 

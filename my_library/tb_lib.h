@@ -1,30 +1,30 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_library.h
+"	     *	  *		|   File : tb_lib.h
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-24
+"	****************	|   Creation Date : 2026-08-25
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-24 21:18:13
+"         *   *      *          |   Last Modified : 2026-08-25 20:29:14
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#ifndef MY_LIBRARY_H
-#define MY_LIBRARY_H
+#ifndef TB_LIB_H
+#define TB_LIB_H
 
 #include <unistd.h>
 #include <stddef.h>
-
+/*
 typedef struct s_list
 {
     void            *content;
     size_t          content_size;
     struct s_list   *next;
 }   t_list;
-
+*/
 /* Charecter */
 int         my_tolower(int c);
 int         my_toupper(int c);
@@ -44,25 +44,31 @@ void        my_putnbr(int n);
 void        my_putnbr_fd(int n, int fd);
 void        my_putstr(const char *str);
 void        my_putstr_fd(const char *str, int fd);
-void        my_putendl(const char *s);
-void        my_putendl_fd(const char *s, int fd);
+void        my_puts(const char *s);
 
-/* Strings Non Memory Allocated */
-size_t      my_strlen(char *str);
-int         my_strcmp(char *s1, char *s2);
+/* Non Memory Allocated Strings */
+size_t      my_strlen(const char *str);
+int         my_strcmp(char *s1, char *s2):
 //int         my_strncmp(const char *s1, const char *s2, size_t n);
-char        *my_strcpy(char *dest, char *src);
-//char        *my_strncpy(char *dest, char *src, size_t len);
+char        *my_strcpy(char *dst, char *src);
+//char        *my_strncpy(char *dst, char *src, size_t n);
+//size_t      *my_strlcpy(char *dst, const char *src, size_t n);
+//char        *my_strcat(char *dst, const char *src);
+//char        *my_strncat(char *dst, const char *src, size_t n);
+//size_t      *my_strlcat(char *dst, const char *src, size_t n);
+char        *my_strchr(const char *str, int c);
+char        *my_strrchr(const char *str, int c);
+//char        *my_strstr(const char *haystack, const char *needle);
+//char        *my_strnstr(const char *haystack, const char *needle, size_t n);
 //char        my_search_and_replace(char *str, char a, char b);
 
-/* Memory Allocation */
+/* Memory Allocated */
 
-/* Strings Momory Allocated*/
+/* Momory Allocated Strings */
 
 /* Utility */
 int         my_atoi(char *str);
 //char      *my_itoa(int n);
-//void        my_isnegative(int n);
 //void        my_swap(int *a, int *b);
 
 #endif

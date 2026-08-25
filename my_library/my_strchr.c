@@ -1,28 +1,36 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_putstr_fd.c
+"	     *	  *		|   File : my_strchr.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-24
+"	****************	|   Creation Date : 2026-08-25
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:41:06
+"         *   *      *          |   Last Modified : 2026-08-25 21:32:59
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "th_lib.h"
 
 /*
-it write an entire string to the specified file destriptor
+searches for the first occurrence of a charecter
 */
 
-void    my_putstr_fd(const char *str, int fd)
+char    *my_strchr(const char *str, int c)
 {
     while (*str)
     {
-        my_putchar_fd(*str, fd);
-        str++;
+        if (*str == (char)c)
+        {
+            return ((char *)str);
+            str++;
+        }
+        if ((char)c == '\0')
+        {
+            return ((char *)str);
+        }
+        return (NULL);
     }
 }
