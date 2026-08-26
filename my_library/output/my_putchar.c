@@ -1,36 +1,20 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_strchr.c
+"	     *	  *		|   File : my_putchar.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-25
+"	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 21:32:59
+"         *   *      *          |   Last Modified : 2026-08-26 19:43:15
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "th_lib.h"
+#include "..\tb_lib.h"
 
-/*
-searches for the first occurrence of a charecter
-*/
-
-char    *my_strchr(const char *str, int c)
+void    my_putchar(char c)
 {
-    while (*str)
-    {
-        if (*str == (char)c)
-        {
-            return ((char *)str);
-            str++;
-        }
-        if ((char)c == '\0')
-        {
-            return ((char *)str);
-        }
-        return (NULL);
-    }
+    write(1, &c, 1);
 }

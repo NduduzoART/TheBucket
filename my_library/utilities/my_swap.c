@@ -1,26 +1,29 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_isdigit.c
+"	     *	  *		|   File : my_swap.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-24
+"	****************	|   Creation Date : 2026-08-26
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-24 21:10:24
+"         *   *      *          |   Last Modified : 2026-08-26 21:29:03
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "my_library.h"
+#include "..\tb_lib.h"
 
-/* checks whether a charecter is a decimal digit from 0 to 9 */
+/*
+it swaps the values of two integer variables
+*/
 
-int     my_isdigit(int c)
+void    my_swap(int *a, int *b)
 {
-    if (c >= '0' && c <= '9')
-    {
-        return (1);
-    }
-    return (0);
+    int temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+
 }

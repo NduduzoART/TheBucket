@@ -1,27 +1,26 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : main_test.c
+"	     *	  *		|   File : my_isalpha.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
 "	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:41:38
+"         *   *      *          |   Last Modified : 2026-08-26 19:40:19
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
-int     main(void)
+/* checks whether a charector ia an alphabetic letter */
+
+int     my_isalpha(int c)
 {
-    char    c;
-
-    my_putstr("my_toupper('a') = ");
-    c = my_toupper('a');
-    my_putchar(c);
-    my_putchar('\n');
-
+    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+    {
+        return (1);
+    }
     return (0);
 }

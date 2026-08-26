@@ -1,28 +1,26 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_putstr_fd.c
+"	     *	  *		|   File : my_isdigit.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
 "	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:41:06
+"         *   *      *          |   Last Modified : 2026-08-26 19:40:58
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
-/*
-it write an entire string to the specified file destriptor
-*/
+/* checks whether a charecter is a decimal digit from 0 to 9 */
 
-void    my_putstr_fd(const char *str, int fd)
+int     my_isdigit(int c)
 {
-    while (*str)
+    if (c >= '0' && c <= '9')
     {
-        my_putchar_fd(*str, fd);
-        str++;
+        return (1);
     }
+    return (0);
 }

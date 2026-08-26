@@ -1,27 +1,33 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_toupper.c
+"	     *	  *		|   File : my_strcpy.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-24
+"	****************	|   Creation Date : 2026-08-25
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:49:19
+"         *   *      *          |   Last Modified : 2026-08-26 20:34:30
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
-/* takes one charector and convert it to uppercase */
+/*
+makes a copy of a string
+*/
 
-int    my_toupper(int c)
+char    *my_strcpy(char *dst, const char *src)
 {
-    if (my_isalpha(c) && my_islower(c))
-    {
-        return (c - 32);
-    }
+    size_t i;
 
-    return (c);
+    i = 0;
+    while (src[i])
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    dst[i] = '\0';
+    return (dst);
 }

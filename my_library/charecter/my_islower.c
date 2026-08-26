@@ -1,24 +1,26 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_isalnum.c
+"	     *	  *		|   File : my_islower.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
 "	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:46:27
+"         *   *      *          |   Last Modified : 2026-08-26 19:41:19
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
-/* check whether a charecter is alphabetic or numeric */
+/*
+Checks whether a charecter is a lowercase from 'a' to 'b'
+*/
 
-int     my_isalnum(int c)
+int     my_islower(int c)
 {
-    if (my_isalpha(c) || my_isdigit(c))
+    if (c >= 'a' && c <= 'z')
     {
         return (1);
     }

@@ -1,28 +1,39 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_islower.c
+"	     *	  *		|   File : my_strrchr.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-24
+"	****************	|   Creation Date : 2026-08-25
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:47:21
+"         *   *      *          |   Last Modified : 2026-08-26 19:55:21
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
 /*
-Checks whether a charecter is a lowercase from 'a' to 'b'
+searches for the last occurrence of a charecter
 */
 
-int     my_islower(int c)
+char    *my_strrchr(const char *str, int c)
 {
-    if (c >= 'a' && c <= 'z')
+    const char *last;
+
+    last = NULL;
+    while (*str)
     {
-        return (1);
+        if (*str == (char)c)
+        {
+            last = str;
+        }
+        str++;
     }
-    return (0);
+    if ((char)c == '\0')
+    {
+        return ((char *)str);
+    }
+    return ((char *)last);
 }

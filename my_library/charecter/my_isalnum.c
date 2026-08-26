@@ -1,24 +1,24 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_isalpha.c
+"	     *	  *		|   File : my_isalnum.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
 "	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:47:00
+"         *   *      *          |   Last Modified : 2026-08-26 19:39:51
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
-/* checks whether a charector ia an alphabetic letter */
+/* check whether a charecter is alphabetic or numeric */
 
-int     my_isalpha(int c)
+int     my_isalnum(int c)
 {
-    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+    if (my_isalpha(c) || my_isdigit(c))
     {
         return (1);
     }

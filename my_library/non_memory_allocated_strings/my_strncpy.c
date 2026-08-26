@@ -1,39 +1,37 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_strncmp.c
+"	     *	  *		|   File : my_strncpy.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-25
+"	****************	|   Creation Date : 2026-08-26
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 21:51:30
+"         *   *      *          |   Last Modified : 2026-08-26 21:18:16
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
 /*
-compares strings untill it reaches a difference, stops after a specified n charecters
+copies up to n charecters from src to dst
 */
 
-int     strncmp(const char *s1, const char *s2, size_t n)
+char    *my_strncpy(char *dst, const char *src, size_t n)
 {
     size_t i;
 
     i = 0;
-    while(i < n && s1[i] && s2[i])
+    while (i < n && src[i])
     {
-        if (s1[i] != s2[i])
-            {
-                return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-            }
+        dst[i] = src[i];
         i++;
     }
-    if (i == n)
+    while (i < n)
     {
-        return (0);
+        dst[i] = '\0';
+        i++;
     }
-    return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+    return (dst);
 }

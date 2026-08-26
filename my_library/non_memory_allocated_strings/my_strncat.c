@@ -1,39 +1,35 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_strrchr.c
+"	     *	  *		|   File : my_strncat.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-25
+"	****************	|   Creation Date : 2026-08-26
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 21:37:51
+"         *   *      *          |   Last Modified : 2026-08-26 22:28:27
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
 /*
-searches for the last occurrence of a charecter
+It appends up to n characters from src to the end of dst, then adds '\0'
 */
 
-char    *my_strrchr(const char *str, in c)
+char    *my_strncat(char *dst, const char *src, size_t n)
 {
-    const char *last
+    size_t dst_len;
+    size_t i;
 
-    last = NULL;
-    while (*str)
+    dst_len = my_strlen(dst);
+    i = 0;
+    while (i < n && src[i])
     {
-        if (*str == (char)c)
-        {
-            last = str;
-        }
-        str++;
+        dst[dst_len + i] = src[i];
+        i++;
     }
-    if ((char)c == '\0')
-    {
-        return ((char *)str)
-    }
-    return ((char *)last);
+    dst[dst_len + i] = '\0';
+    return (dst);
 }

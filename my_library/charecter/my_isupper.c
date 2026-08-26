@@ -1,20 +1,28 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_putchar.c
+"	     *	  *		|   File : my_isupper.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
 "	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-24 21:04:55
+"         *   *      *          |   Last Modified : 2026-08-26 19:41:38
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "my_library.h"
+#include "..\tb_lib.h"
 
-void    my_putchar(char c)
+/*
+Checks whether a charecter is an uppercase letter from A to Z
+*/
+
+int     my_isupper(int c)
 {
-    write(1, &c, 1);
+    if (c >= 'A' && c <= 'Z')
+    {
+        return (1);
+    }
+    return (0);
 }

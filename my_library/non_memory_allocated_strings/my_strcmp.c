@@ -1,28 +1,30 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_putstr.c
+"	     *	  *		|   File : my_strcmp.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
 "	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:42:11
+"         *   *      *          |   Last Modified : 2026-08-26 19:48:34
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
 /*
-print a string to the standard output
+For comparing two9 strings, character by character
 */
 
-void    my_putstr(const char *str)
+int     my_strcmp(char *s1, char *s2)
 {
-    while (*str)
+    int i = 0;
+
+    while (s1[i] == s2[i] && s1[i] != '\0')
     {
-        my_putchar(*str);
-        str++;
+        i++;
     }
+    return (s1[i] - s2[i]);
 }

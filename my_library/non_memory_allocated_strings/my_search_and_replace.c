@@ -1,26 +1,33 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_isspace.c
+"	     *	  *		|   File : my_search_and_replace.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-24
+"	****************	|   Creation Date : 2026-08-26
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:48:30
+"         *   *      *          |   Last Modified : 2026-08-26 22:22:27
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
-/*   */
+/*
+It searches through src and replaces every occurence of charecter a with charecter b.
+*/
 
-int     my_isspace(int c)
+char    my_search_and_replace(char *str, char a, char b)
 {
-    if (c >= 9 && c <= 13 || c == 32)
+    size_t i;
+
+    i = 0;
+    while (str[i])
     {
-        return (1);
+        if (str[i] == a)
+            str[i] == b;
+        i++;
     }
-    return (0);
+    return (b);
 }

@@ -48,19 +48,19 @@ void        my_puts(const char *s);
 
 /* Non Memory Allocated Strings */
 size_t      my_strlen(const char *str);
-int         my_strcmp(char *s1, char *s2):
-//int         my_strncmp(const char *s1, const char *s2, size_t n);
-char        *my_strcpy(char *dst, char *src);
-//char        *my_strncpy(char *dst, char *src, size_t n);
-//size_t      *my_strlcpy(char *dst, const char *src, size_t n);
-//char        *my_strcat(char *dst, const char *src);
-//char        *my_strncat(char *dst, const char *src, size_t n);
-//size_t      *my_strlcat(char *dst, const char *src, size_t n);
+int         my_strcmp(char *s1, char *s2);
+int         my_strncmp(const char *s1, const char *s2, size_t n);
+char        *my_strcpy(char *dst, const char *src);
+char        *my_strncpy(char *dst, const char *src, size_t n);
+size_t      my_strlcpy(char *dst, const char *src, size_t n);
+char        *my_strcat(char *dst, const char *src);
+char        *my_strncat(char *dst, const char *src, size_t n);
+size_t      my_strlcat(char *dst, const char *src, size_t n);
 char        *my_strchr(const char *str, int c);
 char        *my_strrchr(const char *str, int c);
-//char        *my_strstr(const char *haystack, const char *needle);
-//char        *my_strnstr(const char *haystack, const char *needle, size_t n);
-//char        my_search_and_replace(char *str, char a, char b);
+char        *my_strstr(const char *haystack, const char *needle);
+char        *my_strnstr(const char *haystack, const char *needle, size_t n);
+char        my_search_and_replace(char *str, char a, char b);
 
 /* Memory Allocated */
 
@@ -69,6 +69,6 @@ char        *my_strrchr(const char *str, int c);
 /* Utility */
 int         my_atoi(char *str);
 //char      *my_itoa(int n);
-//void        my_swap(int *a, int *b);
+void        my_swap(int *a, int *b);
 
 #endif

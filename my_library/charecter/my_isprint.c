@@ -1,26 +1,24 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_isupper.c
+"	     *	  *		|   File : my_isprint.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
 "	****************	|   Creation Date : 2026-08-24
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:47:45
+"         *   *      *          |   Last Modified : 2026-08-26 19:42:26
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
-/*
-Checks whether a charecter is an uppercase letter from A to Z
-*/
+/* checks whether the charector is a printable ascii charecter */
 
-int     my_isupper(int c)
+int     my_isprint(int c)
 {
-    if (c >= 'A' && c <= 'Z')
+    if (c >= 32 && c <= 126)
     {
         return (1);
     }

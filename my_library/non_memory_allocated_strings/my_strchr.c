@@ -1,26 +1,36 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_isprint.c
+"	     *	  *		|   File : my_strchr.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-24
+"	****************	|   Creation Date : 2026-08-25
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:48:05
+"         *   *      *          |   Last Modified : 2026-08-26 19:52:20
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "../tb_lib.h"
 
-/* checks whether the charector is a printable ascii charecter */
+/*
+searches for the first occurrence of a charecter
+*/
 
-int     my_isprint(int c)
+char    *my_strchr(const char *str, int c)
 {
-    if (c >= 32 && c <= 126)
+    while (*str)
     {
-        return (1);
+        if (*str == (char)c)
+        {
+            return ((char *)str);
+            str++;
+        }
+        if ((char)c == '\0')
+        {
+            return ((char *)str);
+        }
+        return (NULL);
     }
-    return (0);
 }

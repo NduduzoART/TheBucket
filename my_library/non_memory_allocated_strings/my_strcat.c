@@ -1,26 +1,28 @@
 /* ==========================================================================================================================================
 "	       **		|
-"	     *	  *		|   File : my_tolower.c
+"	     *	  *		|   File : my_strcat.c
 "	   *	    *	        |
 "	 *	      *         |   Author      : Lahlimbazo
 "	*              *        |
-"	****************	|   Creation Date : 2026-08-24
+"	****************	|   Creation Date : 2026-08-26
 "        *    *       *         |
-"         *   *      *          |   Last Modified : 2026-08-25 20:49:00
+"         *   *      *          |   Last Modified : 2026-08-26 20:31:33
 "	   *  ****  *		|
 "	    *	   *		|   Copywrite   : Property of TheBucket
 "	     ******		|
 " =========================================================================================================================================== */
 
-#include "tb_lib.h"
+#include "..\tb_lib.h"
 
-/* takes a charector and convert it to lowercase */
+/*
+It appends src to the end of dst
+*/
 
-int    my_tolower(int c)
+char    *my_strcat(char *dst, const char *src)
 {
-    if (my_isalpha(c) && my_isupper(c))
-    {
-        return (c + 32);
-    }
-    return (c);
+    size_t dst_len;
+
+    dst_len = my_strlen(dst);
+    my_strcpy(dst +dst_len, (char *)src);
+    return (dst);
 }
