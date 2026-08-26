@@ -48,7 +48,7 @@ void        my_puts(const char *s);
 
 /* Non Memory Allocated Strings */
 size_t      my_strlen(const char *str);
-int         my_strcmp(char *s1, char *s2);
+int         my_strcmp(const char *s1, const char *s2);
 int         my_strncmp(const char *s1, const char *s2, size_t n);
 char        *my_strcpy(char *dst, const char *src);
 char        *my_strncpy(char *dst, const char *src, size_t n);
