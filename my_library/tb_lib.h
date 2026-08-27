@@ -17,6 +17,7 @@
 
 #include <unistd.h>
 #include <stddef.h>
+#include <stdint.h>
 /*
 typedef struct s_list
 {
@@ -39,12 +40,23 @@ int         my_isupper(int c);
 
 /* Output */
 void        my_putchar(char c);
-void        my_putchar_fd(char c, int fd);
 void        my_putnbr(int n);
-void        my_putnbr_fd(int n, int fd);
 void        my_putstr(const char *str);
-void        my_putstr_fd(const char *str, int fd);
 void        my_puts(const char *s);
+void        my_putunbr(unsigned int n);
+void        my_puthex_lower(unsigned int n);
+void        my_puthex_upper(unsigned int n);
+void        my_putptr(void *ptr);
+
+/* Output to a specific file descripter */
+void        my_putchar_fd(char c, int fd);
+void        my_putnbr_fd(int n, int fd);
+void        my_putstr_fd(const char *str, int fd);
+void        my_puts_fd(const char *s, int fd);
+void        my_putunbr_fd(unsigned int n, int fd);
+void        my_puthex_lower_fd(unsigned int n, int fd);
+void        my_puthex_upper_fd(unsigned int n, int fd);
+void        my_putptr_fd(void *ptr, int fd);
 
 /* Non Memory Allocated Strings */
 size_t      my_strlen(const char *str);
